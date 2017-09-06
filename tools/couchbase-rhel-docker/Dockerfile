@@ -2,13 +2,7 @@
 # This is a RHEL 7 image from Redhat
 FROM registry.access.redhat.com/rhel7
 
-MAINTAINER Couchbase Docker Team <docker@couchbase.com>
-
-# build-time args for RH subscription
-ARG RH_USER
-ARG RH_PASSWORD
-
-RUN subscription-manager register --username $RH_USER --password $RH_PASSWORD --auto-attach
+MAINTAINER Johnathan Kupferer <jkupfere@redhat.com>
 
 # Update server
 RUN yum -y update; yum clean all

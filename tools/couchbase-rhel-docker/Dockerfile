@@ -13,10 +13,11 @@ RUN yum install -y tar \
       yum -y install openssl \
       lsof lshw net-tools numactl \
       sysstat wget screen psmisc \
+      python-httplib2 \
       zip unzip
 
 # Install python-httplib2
-RUN curl https://bootstrap.pypa.io/get-pip.py | python - ; pip install httplib2
+#RUN curl https://bootstrap.pypa.io/get-pip.py | python - ; pip install httplib2
 
 COPY functions /etc/init.d/
 
